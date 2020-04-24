@@ -28,13 +28,16 @@ Rectangle {
         anchors.leftMargin: 4
         anchors.rightMargin: 4
         spacing: 7
+
         Image {
             id: icon
-            source: "icons/person.png"
+            source: "icons/person_2.png"
+            fillMode: Image.PreserveAspectCrop
             Layout.fillHeight: true
             Layout.preferredWidth: height
             Layout.margins: 7
         }
+
         Label {
             id: label
             Layout.fillWidth: true

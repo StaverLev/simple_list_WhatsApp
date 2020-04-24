@@ -7,18 +7,33 @@ Window {
     visible: true
     width: 320
     height: 480
-    title: qsTr("Контакты")
+    title: qsTr("WhatsApp")
 
     ListModel {
         id: contactsModel
         ListElement {
             name: "Василий"
+            avatar: "icons/person.png"
         }
         ListElement {
             name: "Анна"
+            avatar: "icons/panda.png"
         }
         ListElement {
             name: "Максим"
+            avatar: "icons/landscape.png"
+        }
+        ListElement {
+            name: "Антон"
+            avatar: "icons/person_1.png"
+        }
+        ListElement {
+            name: "Лев"
+            avatar: "icons/lion.png"
+        }
+        ListElement {
+            name: "Bot"
+            avatar: "icons/logo.png"
         }
     }
 
