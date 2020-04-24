@@ -14,12 +14,13 @@ Rectangle {
 
     width: parent.width
     height: 60
+    border.color: "#f5f5f5"
 
     color: {
         if (selected)
-            return "#4fc1e9";
+            return "#ececec";
         if (area.containsMouse)
-            return "#f1f1f1";
+            return "#f5f5f5";
         return "white"
     }
 
