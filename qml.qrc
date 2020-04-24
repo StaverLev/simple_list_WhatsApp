@@ -12,5 +12,6 @@
         <file>icons/landscape.png</file>
         <file>icons/panda.png</file>
         <file>icons/person_2.png</file>
+        <file>SecondToolBar.qml</file>
     </qresource>
 </RCC>

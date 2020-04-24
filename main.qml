@@ -40,6 +40,9 @@ Window {
     ColumnLayout {
         anchors.fill: parent
         spacing: 0
+        SecondToolBar {
+            Layout.fillWidth: true
+        }
         MainToolBar {
             Layout.fillWidth: true
             Layout.margins: 4
