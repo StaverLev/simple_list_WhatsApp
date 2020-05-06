@@ -7,6 +7,7 @@ Rectangle {
     id: me
     property alias icon: icon.source
     property alias text: label.text
+    property alias text2: label2.text
     property bool selected: false
 
     signal leftClick()
@@ -38,12 +39,26 @@ Rectangle {
             Layout.preferredWidth: height
             Layout.margins: 7
         }
-
-        Label {
-            id: label
+        ColumnLayout {
             Layout.fillWidth: true
-            font.bold: true
+            Label {
+                id: label
+                Layout.fillWidth: true
+                font.bold: false
+                text: "Имя контакта"
+                elide: Label.ElideRight
+                font.pixelSize: 18
+            }
+            Label {
+                id: label2
+                Layout.fillWidth: true
+                Layout.anchors.top: label.top
+                text: "Вторая строка"
+                elide: Label.ElideRight
+            }
         }
+
+
     }
     MouseArea {
         id: area

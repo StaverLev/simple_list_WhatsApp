@@ -14,26 +14,32 @@ Window {
         ListElement {
             name: "Василий"
             avatar: "icons/person.png"
+            line2: "asdasdasd"
         }
         ListElement {
             name: "Анна"
             avatar: "icons/panda.png"
+            line2: "Фото"
         }
         ListElement {
             name: "Максим"
             avatar: "icons/landscape.png"
+            line2: "Печатает сообщение..."
         }
         ListElement {
             name: "Антон"
             avatar: "icons/person_1.png"
+            line2: "asdasdasd"
         }
         ListElement {
             name: "Лев"
             avatar: "icons/lion.png"
+            line2: "asdasdasd"
         }
         ListElement {
             name: "Bot"
             avatar: "icons/logo.png"
+            line2: "asdasdasd"
         }
     }
 
@@ -52,10 +58,37 @@ Window {
         }
 
         ContactList {
+            id: list
             Layout.fillHeight: true
             Layout.fillWidth: true
             model: contactsModel
+            onMenu: {
+                contactListMenu.popup();
+            }
         }
     }
 
+    Menu {
+        id: contactListMenu
+        modal: true
+        MenuItem {
+            text: "Удалить чат"
+            onTriggered: {
+                contactsModel.remove(list.menuIndex);
+            }
+        }
+        MenuItem {
+            text: "Закрепить чат"
+        }
+        MenuItem {
+            text: "В архив"
+        }
+        MenuItem {
+            text: "Без звука"
+        }
+        MenuItem {
+            text: "Пометить как не прочитанное"
+        }
+
+    }
 }
